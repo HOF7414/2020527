@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>厄鬼椪 Wiki</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Noto Sans TC", sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .wiki-title span {
+            color: yellow;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        .nav button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .section {
+            display: none;
+            padding: 20px;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .card {
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .pokemon-img {
+            width: 100%;
+            border: 2px solid #00aaff;
+            border-radius: 12px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .tag.grass { background-color: #4CAF50; }
+        .tag.fire { background-color: #f44336; }
+        .tag.water { background-color: #2196F3; }
+        .tag.Purple { background-color: #b19cd9; }
+        .tag.lightblue { background-color: #e0ffff; }
+        .tag.return2 { background-color: #888; }
+        .tag.return { background-color: #888; float: right; }
+
+        .stats-bar {
+            background-color: #555;
+            height: 16px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .stats-fill {
+            height: 100%;
+        }
+
+        .bar-hp { background-color: #4CAF50; }
+        .bar-atk { background-color: #f39c12; }
+        .bar-def { background-color: #3498db; }
+        .bar-spa { background-color: #9b59b6; }
+        .bar-spd { background-color: #1abc9c; }
+        .bar-spe { background-color: #e67e22; }
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="wiki-title">厄鬼椪 <span>Wiki</span></div>
+</div>
+
+<div class="nav">
+    <button onclick="showSection('info')">圖鑑</button>
+    <button onclick="showSection('story')">故事</button>
+    <button onclick="showSection('forms')">型態</button>
+    <button onclick="showSection('stats')">種族值</button>
+</div>
+
+<!-- 🧪 圖鑑資訊 -->
+<div id="info" class="section active">
+    <div class="card">
+        <img src="厄鬼椪.png" alt="厄鬼椿">
+        <h2>厄鬼椪 #1017</h2>
+        <p><span class="tag grass">草</span> 弱點：
+            <span class="tag fire">火</span>
+            <span class="tag water">冰</span>
+            <span class="tag Purple">毒</span>
+            <span class="tag lightblue">飛</span>
+        </p>
+        <p>圖鑑版本：屬性會根據戴上的面具而改變，會用矯捷的身手和
+            踢技將敵人玩弄於股掌之上。</p>
+        <p>身高：1.2m｜分類:面具寶可夢｜體重：39.8kg｜性別：♀｜特性：不服輸</p>
+    </div>
+</div>
+
+<!-- 📖 故事 -->
+<div id="story" class="section">
+    <div class="card">
+        <h2><span class="tag" style="background-color: orange;">故事</span></h2>
+        <p>很久很久以前
+            一個來自異國的男人，與一隻蘿莉寶可夢，流浪到了北上鄉
+            北上人見他們外觀獨特，因此畏懼他們，禁止他們入村
+            男人與蘿莉寶可夢只好去深山生活，雖然簡樸，但至少還有彼此
+            唯獨一個面具職人幫助他們，為他們製作了四個面具
+            男人將故鄉帶來的寶石鑲在面具上，並戴著面具出現在北上的掩面祭
+            閃耀的面具馬上成為北上人們的焦點，紛紛羨慕、崇拜著男人。
+            然而寶石面具的事跡傳到了鄰國，被三隻貪婪的寶可夢盯上
+            牠們尾隨著男人，即使男人察覺
+            但仍寡不敵眾遭遇不測，面具被搶走三個
+            蘿莉寶可夢趕到現場時，男人已消失，只剩打鬥痕跡與僅剩的綠面具
+            蘿莉寶可夢勃然大怒，戴著面具與鐵棍，殺進北上鄉
+            將還在炫耀戰利品的三隻寶可夢活活打死，之後怒氣未消繼續大鬧北上鄉。
+
+            毫不知情的北上人將蘿莉寶可夢視為厄鬼，拼命將她趕回山上
+            以為三隻寶可夢是對抗厄鬼的英雄，決定建立雕像與寺廟更奉著牠們
+            知道真相的面具職人試圖向村人解釋，但最後也遭到了排擠
+            面具職人只好選擇沉默，並只將真相秘密傳給自己的後代
+            如今，北上鄉依舊舉辦著祭典，歌頌三隻英雄寶可夢擊退厄鬼的故事
+            而當年的厄鬼依然下落不明。
+
+            但或許哪一天的掩面祭，你可以看到戴著閃耀綠面具的奇妙小蘿莉
+            突然出現在熱鬧祭典的人群中也說不定？</p>
+        <!-- 可加入圖片輪播或劇情文字 -->
+        <button class="tag return" onclick="showSection('info')">返回</button>
+    </div>
+</div>
+
+<!-- 🎭 型態 -->
+<div id="forms" class="section">
+    <div class="card">
+        <h2><span class="tag" style="background-color: orange;">型態</span></h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center;">
+
+            <!-- 火紅面具 -->
+            <div>
+                <img src="厄鬼椪.png" alt="碧草面具" style="width: 100%; max-width: 200px;">
+                <div>厄鬼椪 碧草面具</div>
+                <span class="tag grass">草</span>
+            </div>
+
+            <!-- 火紅面具 -->
+            <div>
+                <img src="厄鬼椪火.png" alt="火紅面具" style="width: 100%; max-width: 200px;">
+                <div>厄鬼椪 火灶面具</div>
+                <span class="tag fire">火</span>
+            </div>
+
+            <!-- 水月面具 -->
+            <div>
+                <img src="厄鬼椪水.png" alt="水月面具" style="width: 100%; max-width: 200px;">
+                <div>厄鬼椪 水井面具</div>
+                <span class="tag water">水</span>
+            </div>
+
+            <!-- 岩石面具 -->
+            <div>
+                <img src="厄鬼椪岩.png" alt="礎石面具" style="width: 100%; max-width: 200px;">
+                <div>厄鬼椪 礎石面具</div>
+                <span class="tag return2">岩石</span>
+            </div>
+        </div>
+
+            <button class="tag return" onclick="showSection('info')">返回</button>
+    </div>
+</div>
+    
+    <!-- 📊 種族值 -->
+    <div id="stats" class="section">
+        <div class="card">
+            <h2><span class="tag" style="background-color: orange;">種族值</span></h2>
+            <p>Lv50 / Lv100 數值推估：</p>
+
+            <div>HP：80
+                <div class="stats-bar"><div class="stats-fill bar-hp" style="width: 60%;"></div></div>
+            </div>
+
+            <div>攻擊：120
+                <div class="stats-bar"><div class="stats-fill bar-atk" style="width: 90%;"></div></div>
+            </div>
+
+            <div>防禦：90
+                <div class="stats-bar"><div class="stats-fill bar-def" style="width: 70%;"></div></div>
+            </div>
+
+            <div>特攻：60
+                <div class="stats-bar"><div class="stats-fill bar-spa" style="width: 45%;"></div></div>
+            </div>
+
+            <div>特防：90
+                <div class="stats-bar"><div class="stats-fill bar-spd" style="width: 70%;"></div></div>
+            </div>
+
+            <div>速度：110
+                <div class="stats-bar"><div class="stats-fill bar-spe" style="width: 85%;"></div></div>
+            </div>
+
+            <p>總和：550</p>
+            <button class="tag return" onclick="showSection('info')">返回</button>
+        </div>
+    </div>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

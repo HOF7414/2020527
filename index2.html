@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>厄鬼椿 Wiki</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Noto Sans TC", sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .wiki-title span {
+            color: yellow;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        .nav button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .section {
+            display: none;
+            padding: 20px;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .card {
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .pokemon-img {
+            width: 100%;
+            border: 2px solid #00aaff;
+            border-radius: 12px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .tag.grass { background-color: #4CAF50; }
+        .tag.fire { background-color: #f44336; }
+        .tag.water { background-color: #2196F3; }
+        .tag.fairy { background-color: #e91e63; }
+        .tag.return { background-color: #888; float: right; }
+
+        .stats-bar {
+            background-color: #555;
+            height: 16px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .stats-fill {
+            height: 100%;
+        }
+
+        .bar-hp { background-color: #4CAF50; }
+        .bar-atk { background-color: #f39c12; }
+        .bar-def { background-color: #3498db; }
+        .bar-spa { background-color: #9b59b6; }
+        .bar-spd { background-color: #1abc9c; }
+        .bar-spe { background-color: #e67e22; }
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="wiki-title">厄鬼椿 <span>Wiki</span></div>
+</div>
+
+<div class="nav">
+    <button onclick="showSection('info')">圖鑑</button>
+    <button onclick="showSection('story')">故事</button>
+    <button onclick="showSection('forms')">型態</button>
+    <button onclick="showSection('stats')">種族值</button>
+</div>
+
+<!-- 🧪 圖鑑資訊 -->
+<div id="info" class="section active">
+    <div class="card">
+        <img src="your_image_url.png" alt="厄鬼椿" class="pokemon-img">
+        <h2>厄鬼椿 #1017</h2>
+        <p><span class="tag grass">草</span> 弱點：
+            <span class="tag fire">火</span>
+            <span class="tag ice">冰</span>
+            <span class="tag poison">毒</span>
+            <span class="tag flying">飛</span>
+        </p>
+        <p>圖鑑描述：是由惡靈附身的面靈面具，會根據擁有者的手和臉控制他人的行為。</p>
+        <p>身高：1.2m｜體重：39.8kg｜性別：♀｜特性：不搖晃</p>
+    </div>
+</div>
+
+<!-- 📖 故事 -->
+<div id="story" class="section">
+    <div class="card">
+        <h2><span class="tag" style="background-color: orange;">故事</span></h2>
+        <p>很久以前的傳說中...</p>
+        <!-- 可加入圖片輪播或劇情文字 -->
+        <button class="tag return" onclick="showSection('info')">返回</button>
+    </div>
+</div>
+
+<!-- 🎭 型態 -->
+<div id="forms" class="section">
+    <div class="card">
+        <h2><span class="tag" style="background-color: orange;">型態</span></h2>
+        <p>厄鬼椿有多種型態變化，根據附身面具變化其屬性。</p>
+        <ul>
+            <li>火紅型態：<span class="tag fire">火</span></li>
+            <li>水面型態：<span class="tag water">水</span></li>
+            <li>妖精型態：<span class="tag fairy">妖</span></li>
+        </ul>
+        <button class="tag return" onclick="showSection('info')">返回</button>
+    </div>
+</div>
+
+<!-- 📊 種族值 -->
+<div id="stats" class="section">
+    <div class="card">
+        <h2><span class="tag" style="background-color: orange;">種族值</span></h2>
+        <p>Lv50 / Lv100 數值推估：</p>
+
+        <div>HP：80
+            <div class="stats-bar"><div class="stats-fill bar-hp" style="width: 60%;"></div></div>
+        </div>
+
+        <div>攻擊：120
+            <div class="stats-bar"><div class="stats-fill bar-atk" style="width: 90%;"></div></div>
+        </div>
+
+        <div>防禦：90
+            <div class="stats-bar"><div class="stats-fill bar-def" style="width: 70%;"></div></div>
+        </div>
+
+        <div>特攻：60
+            <div class="stats-bar"><div class="stats-fill bar-spa" style="width: 45%;"></div></div>
+        </div>
+
+        <div>特防：90
+            <div class="stats-bar"><div class="stats-fill bar-spd" style="width: 70%;"></div></div>
+        </div>
+
+        <div>速度：110
+            <div class="stats-bar"><div class="stats-fill bar-spe" style="width: 85%;"></div></div>
+        </div>
+
+        <p>總和：550</p>
+        <button class="tag return" onclick="showSection('info')">返回</button>
+    </div>
+</div>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
